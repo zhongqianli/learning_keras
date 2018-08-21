@@ -1,13 +1,13 @@
-½«keras¡¢tensorflow¡¢caffe¶¼Ñ§ÁËÒ»±é£¬Ã¿ÖÖ¿ò¼Ü¶¼ÓĞ¸÷×ÔÊÊºÏµÄÓ¦ÓÃ³¡¾°£¬ÆäÖĞkeras×î¼òµ¥Ò×Ñ§¡£±¾ÎÄ½«½éÉÜÈçºÎÊ¹ÓÃkerasÑµÁ·Éî¶ÈÑ§Ï°Ä£ĞÍ¡£
+å°†kerasã€tensorflowã€caffeéƒ½å­¦äº†ä¸€éï¼Œæ¯ç§æ¡†æ¶éƒ½æœ‰å„è‡ªé€‚åˆçš„åº”ç”¨åœºæ™¯ï¼Œå…¶ä¸­kerasæœ€ç®€å•æ˜“å­¦ã€‚æœ¬æ–‡å°†ä»‹ç»å¦‚ä½•ä½¿ç”¨kerasè®­ç»ƒæ·±åº¦å­¦ä¹ æ¨¡å‹ã€‚
 
-# Ò»¡¢¶ÁÈ¡Êı¾İ
-## £¨1£©Êı¾İ×¼±¸
-±¾ÎÄÊ¹ÓÃÊÖĞ´ÌåÊı×ÖÊ¶±ğÊı¾İ¿âmnist¡£kerasÍ¨¹ımnist.load_data()¼´¿É¶ÁÈ¡ÑµÁ·Ñù±¾ºÍ²âÊÔÑù±¾£¬½«¶ÁÈ¡Êı¾İµÄÏ¸½ÚÒş²ØÁË¡£ÎªÁËËµÃ÷kerasÈçºÎ¶ÁÈ¡×Ô¼º²É¼¯µÄÊı¾İ£¬ÎÒÎªmnistµÄ10¸ölabel½¨Á¢¶ÔÓ¦Ãû³ÆµÄ×ÓÎÄ¼ş¼Ğ[0 1 2 3 4 5 6 7 8 9]£¬²¢½«mnistµÄÍ¼Ïñ¹éÒ»»¯Îª32x32±£´æµ½¶ÔÓ¦ÎÄ¼ş¼ĞÖĞ¡£ÎÄ¼ş¼ĞÄ¿Â¼½á¹¹Îª£º  
+# ä¸€ã€è¯»å–æ•°æ®
+## ï¼ˆ1ï¼‰æ•°æ®å‡†å¤‡
+æœ¬æ–‡ä½¿ç”¨æ‰‹å†™ä½“æ•°å­—è¯†åˆ«æ•°æ®åº“mnistã€‚kerasé€šè¿‡mnist.load_data()å³å¯è¯»å–è®­ç»ƒæ ·æœ¬å’Œæµ‹è¯•æ ·æœ¬ï¼Œå°†è¯»å–æ•°æ®çš„ç»†èŠ‚éšè—äº†ã€‚ä¸ºäº†è¯´æ˜keraså¦‚ä½•è¯»å–è‡ªå·±é‡‡é›†çš„æ•°æ®ï¼Œæˆ‘ä¸ºmnistçš„10ä¸ªlabelå»ºç«‹å¯¹åº”åç§°çš„å­æ–‡ä»¶å¤¹[0 1 2 3 4 5 6 7 8 9]ï¼Œå¹¶å°†mnistçš„å›¾åƒå½’ä¸€åŒ–ä¸º32x32ä¿å­˜åˆ°å¯¹åº”æ–‡ä»¶å¤¹ä¸­ã€‚æ–‡ä»¶å¤¹ç›®å½•ç»“æ„ä¸ºï¼š  
 mnist.32x32/train/[0 1 2 3 4 5 6 7 8 9]  
 mnist.32x32/test/[0 1 2 3 4 5 6 7 8 9]			  
-## £¨2£©Êı¾İ¶ÁÈ¡ÓëÊı¾İÔöÇ¿
-kerasÌá¹©ÁËImageDataGeneratorÀàÊµÏÖÊı¾İ¶ÁÈ¡ºÍÊı¾İÔöÇ¿¡£Ê¹ÓÃgeneratorµÄ·½·¨¶ÁÈ¡Êı¾İµÄºÃ´¦ÊÇ½ÚÊ¡¼ÆËã»ú×ÊÔ´£¬ÒòÎªÊı¾İÁ¿ºÜ´óÊ±¿ÉÄÜÎŞ·¨Ò»´ÎĞÔ½«Êı¾İÈ«²¿¶ÁÈë¡£Ö÷ÒªµÄÊı¾İÔöÇ¿·½·¨£ºÆ½ÒÆ¡¢·­×ª¡¢Ğı×ª¡¢Ëæ»ú²Ã¼ô¡¢ÈË¹¤ÔëÉù¡£  
-Êı¾İ¶ÁÈ¡´úÂëÈçÏÂ£º  
+## ï¼ˆ2ï¼‰æ•°æ®è¯»å–ä¸æ•°æ®å¢å¼º
+kerasæä¾›äº†ImageDataGeneratorç±»å®ç°æ•°æ®è¯»å–å’Œæ•°æ®å¢å¼ºã€‚ä½¿ç”¨generatorçš„æ–¹æ³•è¯»å–æ•°æ®çš„å¥½å¤„æ˜¯èŠ‚çœè®¡ç®—æœºèµ„æºï¼Œå› ä¸ºæ•°æ®é‡å¾ˆå¤§æ—¶å¯èƒ½æ— æ³•ä¸€æ¬¡æ€§å°†æ•°æ®å…¨éƒ¨è¯»å…¥ã€‚ä¸»è¦çš„æ•°æ®å¢å¼ºæ–¹æ³•ï¼šå¹³ç§»ã€ç¿»è½¬ã€æ—‹è½¬ã€éšæœºè£å‰ªã€äººå·¥å™ªå£°ã€‚  
+æ•°æ®è¯»å–ä»£ç å¦‚ä¸‹ï¼š  
     
     from keras.preprocessing.image import ImageDataGenerator  
     def load_mnist_data_from_directory_generator(dirpath, target_size = (256, 256), batch_size=32, color_mode='rgb', class_mode='categorical', classes=None):  
@@ -31,8 +31,8 @@ kerasÌá¹©ÁËImageDataGeneratorÀàÊµÏÖÊı¾İ¶ÁÈ¡ºÍÊı¾İÔöÇ¿¡£Ê¹ÓÃgeneratorµÄ·½·¨¶ÁÈ¡Êı
         return train_generator, test_generator
 
 	
-# ¶ş¡¢Ä£ĞÍÉè¼Æ  
-ÕâÀïÒÔLeNetÎªÀı£¬²ÉÓÃº¯ÊıÊ½APIÉè¼ÆÄ£ĞÍ¡£
+# äºŒã€æ¨¡å‹è®¾è®¡  
+è¿™é‡Œä»¥LeNetä¸ºä¾‹ï¼Œé‡‡ç”¨å‡½æ•°å¼APIè®¾è®¡æ¨¡å‹ã€‚
 	
 	def LeNet(input_shape, num_classes):
         inputs = Input(input_shape, name='input_1')
@@ -47,15 +47,15 @@ kerasÌá¹©ÁËImageDataGeneratorÀàÊµÏÖÊı¾İ¶ÁÈ¡ºÍÊı¾İÔöÇ¿¡£Ê¹ÓÃgeneratorµÄ·½·¨¶ÁÈ¡Êı
         model =  Model(inputs=inputs, outputs=predictions)
         return model
 	
-# Èı¡¢Ä£ĞÍ±àÒë  
-ĞèÒªÖ¸¶¨ÓÅ»¯Æ÷¡¢ËğÊ§º¯Êı¡¢ÆÀ¹Àº¯Êı¡£
+# ä¸‰ã€æ¨¡å‹ç¼–è¯‘  
+éœ€è¦æŒ‡å®šä¼˜åŒ–å™¨ã€æŸå¤±å‡½æ•°ã€è¯„ä¼°å‡½æ•°ã€‚
 
 	model = LeNet(input_shape, num_classes)
     optimizer = optimizers.SGD(lr=0.01)
     model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
 	
-# ËÄ¡¢Ä£ĞÍÑµÁ·
-´Ë´¦ĞèÒªÖ¸¶¨epochs¡£batch_sizeÔÚflow_from_directoryÖĞÖ¸¶¨¡£Í¨¹ıTensorBoardÊµÏÖ¿ÉÊÓ»¯¡£Í¨¹ıModelCheckpointÊµÏÖ¼ì²éµãµÄ±£´æ£¬ÓÃÓÚ»Ö¸´ÖĞ¶ÏµÄÄ£ĞÍÑµÁ·¡£
+# å››ã€æ¨¡å‹è®­ç»ƒ
+æ­¤å¤„éœ€è¦æŒ‡å®šepochsã€‚batch_sizeåœ¨flow_from_directoryä¸­æŒ‡å®šã€‚é€šè¿‡TensorBoardå®ç°å¯è§†åŒ–ã€‚é€šè¿‡ModelCheckpointå®ç°æ£€æŸ¥ç‚¹çš„ä¿å­˜ï¼Œç”¨äºæ¢å¤ä¸­æ–­çš„æ¨¡å‹è®­ç»ƒã€‚
 	
 	tensorboard = keras.callbacks.TensorBoard(log_dir=log_dir)
     checkpointer = keras.callbacks.ModelCheckpoint(filepath=ckpt_filepath)
@@ -69,29 +69,29 @@ kerasÌá¹©ÁËImageDataGeneratorÀàÊµÏÖÊı¾İ¶ÁÈ¡ºÍÊı¾İÔöÇ¿¡£Ê¹ÓÃgeneratorµÄ·½·¨¶ÁÈ¡Êı
                         validation_steps=len(test_generator),
                         initial_epoch=initial_epoch)
 	
-tensorboard¿ÉÊÓ»¯½á¹û£º  
+tensorboardå¯è§†åŒ–ç»“æœï¼š  
 *graphs*:
 ![Image text](resources/tf_graphs.png)
   
 *scalars*:  
 ![Image text](resources/tf_acc.jpg)
 ![Image text](resources/tf_loss.jpg)  
-![Image text](resources/tf_val_acc.jpg)  
+![Image text](resources/tf_val_acc.jpg)
 ![Image text](resources/tf_val_loss.jpg)  
 
-# Îå¡¢Ä£ĞÍÆÀ¹À
-ÆÀ¹ÀÄ£ĞÍµÄĞÔÄÜ
+# äº”ã€æ¨¡å‹è¯„ä¼°
+è¯„ä¼°æ¨¡å‹çš„æ€§èƒ½
 
 	score_evaluate = model.evaluate_generator(generator=test_generator, steps=len(test_generator))
     print(score_evaluate)
 						
-# Áù¡¢Ä£ĞÍ±£´æÓëµ¼Èë
+# å…­ã€æ¨¡å‹ä¿å­˜ä¸å¯¼å…¥
 	model.save(model_name)
 	model =  keras.models.load_model(model_name)
 	
-# Æß¡¢ÆäËû¼¼ÇÉ
-## £¨1£©´Ócheckpoint»Ö¸´ÖĞ¶ÏµÄÄ£ĞÍÑµÁ·
-¼ÙÉèÄ£ĞÍ±£´æÎªckpt_filepath = ckpt_dir + '/weights.{epoch:02d}-{val_loss:.2f}.h5'£¬»Ö¸´ÖĞ¶ÏµÄÄ£ĞÍÑµÁ·£º
+# ä¸ƒã€å…¶ä»–æŠ€å·§
+## ï¼ˆ1ï¼‰ä»checkpointæ¢å¤ä¸­æ–­çš„æ¨¡å‹è®­ç»ƒ
+å‡è®¾æ¨¡å‹ä¿å­˜ä¸ºckpt_filepath = ckpt_dir + '/weights.{epoch:02d}-{val_loss:.2f}.h5'ï¼Œæ¢å¤ä¸­æ–­çš„æ¨¡å‹è®­ç»ƒï¼š
 
 	ckpt_filelist = glob.glob('{0}/weights.*.h5'.format(ckpt_dir))
     if len(ckpt_filelist) == 0:
@@ -102,12 +102,12 @@ tensorboard¿ÉÊÓ»¯½á¹û£º
         initial_epoch = int(filename.split('weights.')[-1].split('-')[0])
         print('restore from {0}, initial_epoch = {1}'.format(filename, initial_epoch))
         
-## £¨2£©Ä£ĞÍ¿ÉÊÓ»¯
-³ıÁËÓÃtensorboard£¬»¹¿ÉÒÔÊ¹ÓÃmodel.summary()ºÍplot_model¡£  	
-*plot_model½á¹û*£º
+## ï¼ˆ2ï¼‰æ¨¡å‹å¯è§†åŒ–
+é™¤äº†ç”¨tensorboardï¼Œè¿˜å¯ä»¥ä½¿ç”¨model.summary()å’Œplot_modelã€‚  	
+*plot_modelç»“æœ*ï¼š
 ![Image text](resources/plot_model.png)
 
-# °Ë¡¢learning_kerasË¼Î¬µ¼Í¼
+# å…«ã€learning_kerasæ€ç»´å¯¼å›¾
 ![Image text](resources/learning_keras.png)	
 	    
 	
